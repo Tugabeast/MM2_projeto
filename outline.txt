@@ -1,0 +1,24 @@
+Website Outline
+
+1. Website Pages
+	a. Home Page
+	b. Sobre Nós
+		i. Algumas informações sobre os participantes do projeto
+	c. Contactos
+		i. Informações sobre o website, como email, instagram, facebook entre outros
+	d. Mappa Mundi
+		i.mappa mundi contem curiosidades em pins
+	e. Ajudar
+		i.Dicas e atitudes para que o utilizador possa combater o problema do lixo nos oceanos
+	f. Media
+		i. Imagens , videos e audios para sensibilizar os utilizadores
+	g. Quiz	
+		i. Jogo interativo com ligação ao quiz
+	
+2. Site Features
+	a. Design responsivo para mobile
+	b. Videos e audios embibidos em uma página
+	c. Quiz sobre poluiçao nos oceanos
+	d. Jogo interativo sobre remover lixo dos oceanos ligado ao quiz
+	
+	
