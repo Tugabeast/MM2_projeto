@@ -1,0 +1,191 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Obliterate Ocean Trash For 2 Minutes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get that trash out!">
+  <meta name="author" content="Zaurbek Stark">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta property="og:title" content="Obliterate Ocean Trash For 2 Minutes">
+  <meta property="og:type" content="game" />
+  <meta property="og:image" content="https://obliterateoceantrashfor2minutes.com/img/thumbnail-teamseas.png">
+  <meta property="og:url" content="https://obliterateoceantrashfor2minutes.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="og:description" content="Let's help #TeamSeas!">
+  <meta property="og:site_name" content="Obliterate Ocean Trash For 2 Minutes">
+  <meta name="twitter:image:alt" content="Obliterate Ocean Trash For 2 Minutes">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YCZLBGMZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3YCZLBGMZV');
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.8/chance.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.imgexplode.min.js"></script>
+
+  <!-- urbane-rounded font -->
+  <link rel="stylesheet" href="https://use.typekit.net/vlt6mcv.css" />
+  <!-- open sans font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"
+  />
+</head>
+
+<body onload="startGame()">
+  <div class="container">
+    <h3 class="title">Limpe o Oceano por 2 Minutos</h3>
+    <h2 id="counter">0</h2>
+    <h3 id="time">02:00</h3>
+    <div class="ocean-container">
+      <div id="trash-container"></div>
+      <div id="fish-container"></div>
+
+      <div id="endModal" class="modal">
+        <div class="modal-content">
+          <h2>Voce Limpou</h2>
+          <h2 id="end-score"></h2>
+          <h2>kilos de lixo</h2>
+          <p>Agora faça isso na vida real :)</p>
+          <button class="main-button" onclick="restartGame()">Jogar de novo</button>
+          <!--<p class="author">Game built by <a href="https://www.youtube.com/c/ZaurbekStark/" target="_blank">Zaurbek Stark</a></p>-->
+        </div>
+      </div>
+      <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+          <h2>Voce matou um peixe :(</h2>
+          <p>Não pode fazer isso.</p>
+          <button class="main-button" onclick="restartGame()">Jogar de novo</button>
+          <!--<p class="author">Game built by <a href="https://www.youtube.com/c/ZaurbekStark/" target="_blank">Zaurbek Stark</a></p>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let counter = 0;
+    let startGameTimeout;
+    let intervalTime = 1000;
+    let speedFactor = 10; 
+
+    function finishGame() {
+      gtag('event', 'go_to_teamseas', {
+        'event_category': 'lead_generation',
+        'event_label': 'end_modal',
+      });
+      //window.open('https://teamseas.org/', '_blank');
+    }
+
+    function restartGame() {
+      gtag('event', 'restart_game', {
+        'event_category': 'new_try',
+        'event_label': 'game_over_modal',
+      });
+      window.location.reload();
+    }
+
+    function startGame() {
+      showTrash();
+      showFish();
+      startTimer();
+    }
+
+    function showTrash() {
+      let top = Math.random() * 80;
+      let left = Math.random() * 80;
+      let sign = 1;
+      if (Math.random() > 0.5) sign = -1;
+      document.getElementById("trash-container").innerHTML += `
+        <img src="img/trash${Math.floor(Math.random()*5)+1}.png" onclick="obliterateTrash(this)" class="trash" style="top: ${top}%; left: ${left}%; transform: rotate(${30*Math.random()*sign}deg);" />
+      `;
+      if (intervalTime - speedFactor > 700) {
+        intervalTime -= speedFactor;
+      }
+      startGameTimeout = setTimeout(showTrash, intervalTime);
+    }
+
+    function showFish() {
+      let top = Math.random() * 80;
+      let left = Math.random() * 80;
+      let sign = 1;
+      if (Math.random() > 0.5) sign = -1;
+      document.getElementById("trash-container").innerHTML += `
+        <img src="img/fish${Math.round(Math.random())+1}.png" onclick="obliterateFish(this)" class="fish" style="top: ${top}%; left: ${left}%; transform: rotate(${10*Math.random()*sign}deg);" />
+      `;
+      startGameTimeout = setTimeout(showFish, 10000);
+    }
+
+    function obliterateTrash(element) {
+      // element.remove();
+      $(element).toggle('explode', { pieces: 50 }, 100);
+      counter++;
+      document.getElementById("counter").innerHTML = counter;
+      if (Math.random() > 0.9) {
+        var soundPunch = new Audio(`sounds/punch3.mp3`);
+      } else if (Math.random() > 0.75) {
+        var soundPunch = new Audio(`sounds/punch1.mp3`);
+      } else {
+        var soundPunch = new Audio(`sounds/splat.mp3`);
+      }
+      soundPunch.volume = 0.3;
+      soundPunch.play();
+    }
+
+    function obliterateFish(element) {
+      $(element).toggle('explode', { pieces: 50 }, 100);
+      let soundAlarm = new Audio('sounds/sad.mp3');
+      soundAlarm.volume = 0.3;
+      soundAlarm.play();
+      let modal = document.getElementById("gameOverModal");
+      modal.style.display = "flex";
+    }
+
+    function showModal() {
+      let modal = document.getElementById("endModal");
+      modal.style.display = "flex";
+      document.getElementById("end-score").innerHTML = counter;
+    }
+
+    function startTimer() {
+      let duration = 120;
+      let timer = duration, minutes, seconds;
+      (function countdown() {
+        minutes = parseInt(timer/60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("time").innerHTML = minutes + ":" + seconds;
+
+        if(timer <= 0) {
+          showModal();
+          clearTimeout(startGameTimeout);
+        } else {
+          --timer;
+        }
+        setTimeout(countdown, 1000);
+      })();
+    }
+
+  </script>
+</body>
+</html>
