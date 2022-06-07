@@ -2,6 +2,7 @@ Website Outline
 
 1. Website Pages
 	a. Home Page
+		i. Vai ter noticias, um resumo do problema em causa e o nosso proposito
 	b. Sobre Nós
 		i. Algumas informações sobre os participantes do projeto
 	c. Contactos
@@ -9,7 +10,8 @@ Website Outline
 	d. Mappa Mundi
 		i.mappa mundi contem curiosidades em pins
 	e. Ajudar
-		i.Dicas e atitudes para que o utilizador possa combater o problema do lixo nos oceanos
+		i. Dicas e atitudes para que o utilizador possa combater o problema do lixo nos oceanos
+		ii.Um formulario para a newsletter e entrar em eventos
 	f. Media
 		i. Imagens , videos e audios para sensibilizar os utilizadores
 	g. Quiz	
