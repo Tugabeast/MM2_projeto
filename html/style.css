@@ -167,3 +167,28 @@ footer a{
 #factBox{
   display: none;
 }
+
+.fotoPergunta{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 85px;
+  margin-top: 65px;
+}
+
+.timer{
+  background-color: #006494;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  margin-right: 40px;
+  line-height: 90px;
+}
+
+#infoContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
