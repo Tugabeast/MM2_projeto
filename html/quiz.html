@@ -24,15 +24,16 @@
         <div class="container">
             <div id="infoContainer">
                 <img src="maps.jpg" alt="fotoPergunta" class="fotoPergunta">
-                <div class="timer">20</div>
+                <div class="timer" id="relogio">20</div>
             </div>
             <div>
+                <button onclick="start()">Start Quiz</button>
                 <p>Questão numero 1</p>
                 <p>resposta 1</p>
                 <p>resposta 1</p>
                 <p>resposta 1</p>
                 <p>resposta 1</p>
-                <p onclick="question()">Proxima -></p>
+                <p onclick="question() ; restartTimer()">Proxima -></p>
             </div>
         </div>
         <footer>
