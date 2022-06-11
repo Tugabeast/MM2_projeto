@@ -34,7 +34,8 @@ function start(){
     timer = setInterval(updateTimer, 1000);
 
     updateTimer();
-
+    document.getElementById("relogio").style.display = "block";
+    document.getElementById("fotoPergunta").style.display = "block";
     document.getElementById("respostas").style.display = "grid";
     document.getElementById("pergunta").style.display = "flex";
     document.getElementById("startQuiz").style.display = "none";
