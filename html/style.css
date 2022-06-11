@@ -42,7 +42,6 @@ body {
   margin: auto;
   margin-top: 20px;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -59,13 +58,6 @@ hr{
 .noticias{
   display: flex;
   margin-top: 20px;
-}
-
-.box{
-  border-radius: 10px;
-  box-shadow: 2px 0 0 0 #67BF77;
-  padding: 10px;
-  margin: 5px;
 }
 
 footer{
@@ -282,9 +274,45 @@ footer a{
   cursor: pointer;
 }
 
+
+#lojaContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 20px auto;
+  height: 100%;
+}
+
+.produto{
+  display: flex;
+  flex-direction: column;
+  background-color: #A7BCDB;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px gray;
+  cursor: pointer;
+  align-items: center;
+}
+
+.produto img{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.preco{
+  display: flex;
+  align-items: center;
+}
+
+.preco img{
+  width: 40px;
+}
 /* --------- TABLET --------- */
 @media (min-width: 600px) {
-  
+  .produto{
+    width: 180px;
+    height: 300px;
+  }
 }
 
 /* --------- LAPTOP --------- */
@@ -324,4 +352,8 @@ footer a{
     width: 250px;
   }
 
+  .produto{
+    width: 230px;
+    height: 350px;
+  }
 }
