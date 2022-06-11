@@ -17,8 +17,8 @@
               <a href="index.html" class="active">Team Oceans</a>
               <a href="Ajudar.html">Como Ajudar?</a>
               <a href="#news">Aprender</a>
-              <a href="#news">Curiosidades</a>
-              <a href="#news">Quiz</a>
+              <a href="curiosidades.html">Curiosidades</a>
+              <a href="" class="active">Quiz</a>
             </div>
         </nav>
         <div class="container">
@@ -28,12 +28,16 @@
             </div>
             <div>
                 <button onclick="start()">Start Quiz</button>
-                <p>Questão numero 1</p>
-                <p>resposta 1</p>
-                <p>resposta 1</p>
-                <p>resposta 1</p>
-                <p>resposta 1</p>
-                <p onclick="question() ; restartTimer()">Proxima -></p>
+                <div class="pergunta">
+                    <p>Questão numero 1</p>
+                    <p onclick="question() ; restartTimer()">Proxima -></p>
+                </div>
+                <div class="respostas">
+                    <div id="rep1">Resposta 1</div>
+                    <div id="rep2">Resposta 1</div>
+                    <div id="rep3">Resposta 1</div>
+                    <div id="rep4">Resposta 1</div>
+                </div>
             </div>
         </div>
         <footer>
