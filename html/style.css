@@ -96,6 +96,7 @@ footer a{
   position: relative;
   overflow: hidden;
   z-index: 1;
+  margin-bottom: 30px;
 }
 
 .btn1::before {
@@ -129,7 +130,8 @@ footer a{
 }
 
 .video{
-  width: 400px;
+  width: 300px;
+  height: 150px;
   margin: auto;
 }
 
@@ -169,11 +171,11 @@ footer a{
 }
 
 .fotoPergunta{
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
   border-radius: 10px;
-  margin-left: 85px;
-  margin-top: 65px;
+  margin-left: 30px;
+  margin-top: 15px;
 }
 
 .timer{
@@ -181,22 +183,28 @@ footer a{
   color: #fff;
   border-radius: 50%;
   text-align: center;
-  width: 90px;
-  height: 90px;
-  margin-right: 40px;
-  line-height: 90px;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  line-height: 70px;
 }
 
 #infoContainer{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.next{
+  cursor: pointer;
 }
 
 .respostas{
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
+  display: none;
 }
 
 #rep1{
@@ -232,4 +240,55 @@ footer a{
   display: flex;
   justify-content: space-between;
   margin: 0 30px;
+  display: none;
+}
+
+#formContainer{
+  display: none;
+}
+
+/* --------- TABLET --------- */
+@media (min-width: 600px) {
+  
+}
+
+/* --------- LAPTOP --------- */
+@media (min-width: 800px) {
+
+  .video{
+    width: 700px;
+    height: 300px;
+    margin: auto;
+  }
+
+  .fotoPergunta{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 85px;
+    margin-top: 45px;
+  }
+
+  .timer{
+    background-color: #006494;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    margin-right: 40px;
+    line-height: 90px;
+  }
+
+  .forms{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+  }
+
+  .forms input{
+    margin: 10px 0;
+  }
 }

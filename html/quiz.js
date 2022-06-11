@@ -6,7 +6,11 @@ function question(){
     pergunta = pergunta + 1;
     console.log("numero: ", pergunta);
     if(pergunta == 8){
-        console.log("acabou");
+        document.getElementById("respostas").style.display = "none";
+        document.getElementById("pergunta").style.display = "none";
+        document.getElementById("relogio").style.display = "none";
+        document.getElementById("fotoPergunta").style.display = "none";
+        document.getElementById("formContainer").style.display = "block";
     }
 }
 
@@ -30,6 +34,10 @@ function start(){
     timer = setInterval(updateTimer, 1000);
 
     updateTimer();
+
+    document.getElementById("respostas").style.display = "grid";
+    document.getElementById("pergunta").style.display = "flex";
+    document.getElementById("startQuiz").style.display = "none";
 }
 
 

@@ -23,20 +23,29 @@
         </nav>
         <div class="container">
             <div id="infoContainer">
-                <img src="maps.jpg" alt="fotoPergunta" class="fotoPergunta">
+                <img src="maps.jpg" alt="fotoPergunta" class="fotoPergunta" id="fotoPergunta">
                 <div class="timer" id="relogio">20</div>
             </div>
             <div>
-                <button onclick="start()">Start Quiz</button>
-                <div class="pergunta">
+                <button onclick="start()" id="startQuiz" class="btn1 wave">Start Quiz</button>
+                <div class="pergunta" id="pergunta">
                     <p>Questão numero 1</p>
-                    <p onclick="question() ; restartTimer()">Proxima -></p>
+                    <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
                 </div>
-                <div class="respostas">
+                <div class="respostas" id="respostas">
                     <div id="rep1">Resposta 1</div>
                     <div id="rep2">Resposta 1</div>
                     <div id="rep3">Resposta 1</div>
                     <div id="rep4">Resposta 1</div>
+                </div>
+                <div id="formContainer">
+                    <form action="" class="forms">
+                        <label for="userName">Username: </label>
+                        <input type="text" name="userName" id="userName" placeholder="Username">
+                        <label for="idade">Idade: </label>
+                        <input type="number" name="idade" id="idade" placeholder="idade">
+                        <button type="submit" class="btn1 wave">Enivar dados</button>
+                    </form>
                 </div>
             </div>
         </div>
