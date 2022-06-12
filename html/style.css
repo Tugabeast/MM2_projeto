@@ -51,6 +51,10 @@ hr{
   color: #67BF77;
 }
 
+h3{
+  padding: 15px 0;
+}
+
 .title{
   color: #A7BCDB;
 }
@@ -73,6 +77,11 @@ footer a{
   color: #ECECEC;
   margin: 5px;
 
+}
+
+footer a:hover {
+  color: white;
+  border-bottom: 3px solid #67BF77;
 }
 
 .btn1{
