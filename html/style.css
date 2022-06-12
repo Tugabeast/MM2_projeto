@@ -366,3 +366,31 @@ footer a:hover {
     height: 350px;
   }
 }
+
+/* css como ajudar */
+
+.container1{
+  
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+#myCarousel{
+  border: 3px solid #006494;
+}
+
+.item h3{
+  font-size: 30px;
+}
+
+.item p{
+  font-size: 40px;
+}
+
+.container2{
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 90px;
+}
+
