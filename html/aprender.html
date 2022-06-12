@@ -9,29 +9,64 @@
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="index.js"></script>
+        <script src="quiz.js"></script>
     </head>
     <body>
         <nav>
             <div class="topnav" id="myTopnav">
               <a href="index.html">Team Oceans</a>
               <a href="Ajudar.html">Como Ajudar?</a>
-              <a href="aprender.html">Aprender</a>
-              <a href="" class="active">Curiosidades</a>
-              <a href="quiz.html">Quiz</a>
+              <a href="" class="active">Aprender</a>
+              <a href="curiosidades.html">Curiosidades</a>
+              <a href="quiz.html" >Quiz</a>
               <a href="loja.html">Loja</a>
             </div>
         </nav>
-        <div class="container">
-            <div id="mapContainer">
-                <img src="maps.jpg" alt="mapa" id="mapa">
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin1" id="pin1" onclick="openFact(1)"></span>
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin2" id="pin2" onclick="openFact(2)"></span>
-            </div>
-            <div id="factBox">
-                <h1>Curiosidade: </h1>
-                <p id="texto">sauhdusbudnuasnhd</p>
-            </div>
-        </div>
+        <section class="aprenderContainer">
+            <h2 class="title">Qual o problema em questão?</h2>
+            <iframe src="https://www.youtube.com/embed/AH3eoenwX5U" frameborder="0"></iframe>
+            <article>
+                <h2 class="title">Quais as principais causas da poluição?</h2>
+                <p>Atualmente as duas principais causas de poluição dos oceanos são o petróleo e o plástico. O primeiro deve se principalmente devido a vazamentos em navios ou são propositadamente despejados nos oceanos. O plástico vem principalmente de lixo deixado nas praias ou são atirados de embarcações.</p>
+                <img src="petroleo.jpg" alt="petroleo">
+                <img src="plastico.jpg" alt="plastico">
+            </article>
+            <article class="time">
+                <h2 class="title">Quanto tempo demora o lixo a deteriorar-se?</h2>
+                <div class="timeline">
+                    <div class="containerTime left">
+                      <div class="content">
+                        <h2>3 a 6 meses</h2>
+                        <img src="lixo/papel.png" alt="papel">
+                      </div>
+                    </div>
+                    <div class="containerTime right">
+                      <div class="content">
+                        <h2>20 anos</h2>
+                        <img src="lixo/saco.png" alt="saco">
+                      </div>
+                    </div>
+                    <div class="containerTime left">
+                      <div class="content">
+                        <h2>200 anos</h2>
+                        <img src="lixo/palhinha.png" alt="palhinha">
+                      </div>
+                    </div>
+                    <div class="containerTime right">
+                      <div class="content">
+                        <h2>450 anos</h2>
+                        <img src="lixo/garrafa.png" alt="garrafa">
+                      </div>
+                    </div>
+                    <div class="containerTime left">
+                      <div class="content">
+                        <h2>600 anos</h2>
+                        <img src="lixo/linha.png" alt="linha">
+                      </div>
+                    </div>
+                  </div>
+            </article>
+        </section>
         <footer>
           <a href="#about us">Sobre nós</a>
           <a href="#about us">Contactos</a>
