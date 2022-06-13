@@ -23,7 +23,7 @@ body {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 17px;
   border-bottom: 3px solid #006494;
 }
@@ -436,7 +436,7 @@ footer a:hover {
 }
 
 .left::before {
-  content: " ";
+  /*content: " ";*/
   height: 0;
   position: absolute;
   top: 22px;
@@ -450,7 +450,7 @@ footer a:hover {
 
 
 .right::before {
-  content: " ";
+  /*content: " ";*/
   height: 0;
   position: absolute;
   top: 22px;
@@ -516,60 +516,47 @@ footer a:hover {
   }
 }
 
-/* css como ajudar */
-
-.container1{
-  
-  width: 1000px;
-  margin: auto;
-  margin-bottom: 50px;
-}
-
-#myCarousel{
-  border: 3px solid #006494;
-}
-
-.item h3{
-  font-size: 30px;
-}
-
-.item p{
-  font-size: 40px;
-}
-
-.container2{
-  width: 1000px;
-  margin: auto;
-  margin-bottom: 90px;
-}
-
-
 
 
 
 /* css como ajudar */
 
-.container1{
+.containerCarousel{
   
-  width: 1000px;
+  width: 50%;
   margin: auto;
   margin-bottom: 50px;
 }
 
-#myCarousel{
+.carousel-inner img{
   border: 3px solid #006494;
+  height: 200px !important;
+  margin: auto !important;
 }
 
 .item h3{
-  font-size: 30px;
+  font-size: 200%;
+  text-align: center;
+  color: #006494;
+  margin-top: auto;
 }
 
 .item p{
-  font-size: 40px;
+  font-size: 150%;
+  text-align: center;
+  color: #006494;
 }
 
-.container2{
-  width: 1000px;
+.containerJogo{
+  width: 50%;
   margin: auto;
   margin-bottom: 90px;
+}
+
+.carousel-control.right {
+  background-image: none !important;
+}
+
+.carousel-control.left{
+  background-image: none !important;
 }
