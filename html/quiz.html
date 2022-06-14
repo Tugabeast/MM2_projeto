@@ -24,20 +24,20 @@
         </nav>
         <div class="container">
             <div id="infoContainer">
-                <img src="maps.jpg" alt="fotoPergunta" class="fotoPergunta" id="fotoPergunta">
+                <img src="QuizImages/pergunta1.jpeg" alt="fotoPergunta" class="fotoPergunta" id="fotoPergunta">
                 <div class="timer" id="relogio">20</div>
             </div>
             <div>
                 <button onclick="start()" id="startQuiz" class="btn1 wave">Start Quiz</button>
                 <div class="pergunta" id="pergunta">
-                    <p>Questão numero 1</p>
+                    <p id="quest">1- O que é a poluição marítima?</p>
                     <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
                 </div>
                 <div class="respostas" id="respostas">
-                    <div id="rep1">Resposta 1</div>
-                    <div id="rep2">Resposta 1</div>
-                    <div id="rep3">Resposta 1</div>
-                    <div id="rep4">Resposta 1</div>
+                    <div id="rep1" onclick="question()">Introdução de elementos inofensivos no ambiente marinho</div>
+                    <div id="rep2" onclick="question()">Introdução de elementos prejudiciais no ambiente marinho</div>
+                    <div id="rep3" onclick="question()">Diminuição da temperatura da água do mar</div>
+                    <div id="rep4" onclick="question()">A entrada de pessoas na água do mar</div>
                 </div>
                 <div id="formContainer">
                     <form action="" class="forms">
