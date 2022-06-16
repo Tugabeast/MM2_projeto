@@ -16,7 +16,7 @@
             <div class="topnav" id="myTopnav">
               <a href="index.html">Team Oceans</a>
               <a href="Ajudar.html">Como Ajudar?</a>
-              <a href="#news">Aprender</a>
+              <a href="aprender.html">Aprender</a>
               <a href="curiosidades.html">Curiosidades</a>
               <a href="" class="active">Quiz</a>
               <a href="loja.html">Loja</a>
@@ -34,25 +34,21 @@
                     <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
                 </div>
                 <div class="respostas" id="respostas">
-                    <div id="rep1" onclick="question()">Introdução de elementos inofensivos no ambiente marinho</div>
-                    <div id="rep2" onclick="question()">Introdução de elementos prejudiciais no ambiente marinho</div>
-                    <div id="rep3" onclick="question()">Diminuição da temperatura da água do mar</div>
-                    <div id="rep4" onclick="question()">A entrada de pessoas na água do mar</div>
-                </div>
-                <div id="formContainer">
-                    <form action="" class="forms">
-                        <label for="userName">Username: </label>
-                        <input type="text" name="userName" id="userName" placeholder="Username">
-                        <label for="idade">Idade: </label>
-                        <input type="number" name="idade" id="idade" placeholder="Idade">
-                        <button type="submit" id="subBtn">Enivar dados</button>
-                    </form>
+                    <div id="rep1" onclick="question() ; resp(1) ; restartTimer()">Introdução de elementos inofensivos no ambiente marinho</div>
+                    <div id="rep2" onclick="question() ; resp(2) ; restartTimer()">Introdução de elementos prejudiciais no ambiente marinho</div>
+                    <div id="rep3" onclick="question() ; resp(3) ; restartTimer()">Diminuição da temperatura da água do mar</div>
+                    <div id="rep4" onclick="question() ; resp(4) ; restartTimer()">A entrada de pessoas na água do mar</div>
                 </div>
             </div>
+            <div id="final">
+                <h1 class="title">Quer saber como foi o seu desempenho?</h1>
+                <h3>Clique no botão abaixo para ver o seu resultado</h3>
+            </div>
+            <a href="score.html" class="btn1 wave" id="score">Ver o resultado</a>
         </div>
         <footer>
           <a href="about.html">Sobre nós</a>
-          <a href="#about us">Contactos</a>
+          <a href="contact.html">Contactos</a>
           <a href="#about us">Parceiros</a>
         </footer>
     </body>

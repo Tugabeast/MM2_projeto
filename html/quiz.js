@@ -1,5 +1,7 @@
 var pergunta = 1;
 var tempo = 20;
+var certas = 0;
+var erradas = 0;
 var timer;
 
 function question(){
@@ -56,7 +58,8 @@ function question(){
         document.getElementById("pergunta").style.display = "none";
         document.getElementById("relogio").style.display = "none";
         document.getElementById("fotoPergunta").style.display = "none";
-        document.getElementById("formContainer").style.display = "block";
+        document.getElementById("score").style.display = "block";
+        document.getElementById("final").style.display = "block";
     }
 }
 
@@ -95,4 +98,50 @@ function restartTimer(){
     timer = setInterval(updateTimer, 1000);
 
     updateTimer;
+}
+
+
+function resp(numero){
+    console.log(numero);
+    switch(pergunta){
+        case 1:
+            if(numero == 2){
+                certas = certas +1;
+            }
+            break;
+        case 2: 
+            if(numero == 4){
+                certas = certas +1;
+            }
+            break;
+        case 3: 
+            if(numero == 1){
+                certas = certas +1;
+            }
+            break;
+        case 4: 
+            if(numero == 3){
+                certas = certas +1;
+            }
+            break;
+        case 5: 
+            if(numero == 4){
+                certas = certas +1;
+            }
+            break;
+        case 6: 
+            if(numero == 2){
+                certas = certas +1;
+            }
+            break;
+        case 7: 
+            if(numero == 4){
+                certas = certas +1;
+            }
+            break;
+    }
+    console.log("certas: " + certas);
+    console.log("erradas: " + erradas);
+    document.getElementById("respCerta").innerHTML = certas;
+    document.getElementById("respErrada").innerHTML = erradas;
 }

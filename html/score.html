@@ -9,6 +9,7 @@
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="index.js"></script>
+        <script src="quiz.js"></script>
     </head>
     <body>
         <nav>
@@ -16,25 +17,20 @@
               <a href="index.html">Team Oceans</a>
               <a href="Ajudar.html">Como Ajudar?</a>
               <a href="aprender.html">Aprender</a>
-              <a href="" class="active">Curiosidades</a>
-              <a href="quiz.html">Quiz</a>
+              <a href="curiosidades.html">Curiosidades</a>
+              <a href="" class="active">Quiz</a>
               <a href="loja.html">Loja</a>
             </div>
         </nav>
         <div class="container">
-            <div id="mapContainer">
-                <img src="maps.jpg" alt="mapa" id="mapa">
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin1" id="pin1" onclick="openFact(1)"></span>
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin2" id="pin2" onclick="openFact(2)"></span>
-            </div>
-            <div id="factBox">
-                <h1>Curiosidade: </h1>
-                <p id="texto">sauhdusbudnuasnhd</p>
-            </div>
+            <h1 class="title">Resultado Final</h1>
+            <p>Em um total de 7 perguntas...</p>
+            <h3>Acertou: <span id="respCerta"></span></h3>
+            <h3>Errou: <span id="respErrada"></span></h3>
         </div>
         <footer>
           <a href="about.html">Sobre nós</a>
-          <a href="contact.html">Contactos</a>
+          <a href="#about us">Contactos</a>
           <a href="#about us">Parceiros</a>
         </footer>
     </body>

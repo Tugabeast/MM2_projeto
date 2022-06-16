@@ -61,6 +61,7 @@ h3{
 
 .title{
   color: #A7BCDB;
+  font-size: 40px;
 }
 
 .noticias{
@@ -105,6 +106,7 @@ footer a:hover {
   overflow: hidden;
   z-index: 1;
   margin-bottom: 30px;
+  text-decoration: none;
 }
 
 .btn1::before {
@@ -262,26 +264,6 @@ footer a:hover {
   display: none;
 }
 
-#formContainer{
-  border-radius: 5px;
-  background-color: #247BA0;
-  display: none;
-  flex-direction: column;
-  width: 150px;
-  margin: auto;
-  padding: 20px;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-#formContainer input{
-  width: 100%;
-  margin: 5px 0;
-}
-
-#formContainer label{
-  text-align: start;
-}
 
 #subBtn{
   border: none;
@@ -333,6 +315,13 @@ footer a:hover {
 
 .aprenderContainer{
   padding: 20px;
+  text-align: center;
+}
+
+.aprenderContainer iframe{
+  margin: auto;
+  width: 100%;
+  height: 150px;
 }
 
 .aprenderContainer img{
@@ -379,6 +368,63 @@ footer a:hover {
   text-align: center;
 }
 
+#score{
+  display: none;
+}
+
+#final{
+  display: none;
+}
+
+
+.campo{
+  margin-bottom: 1em;
+}
+
+.campo label{
+  margin-bottom: 0.2em;
+  color: #006494;
+  display: block;
+  font-size: 20px;
+}
+
+.campo input{
+  margin: auto;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea{
+  padding: 0.2em;
+  border: 1px solid #006494;
+  box-shadow: 5px 5px 20px gray;
+  display: block;
+  margin: auto;
+}
+
+
+.campo select option{
+  padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus{
+  background: #ECECEC;
+}
+
+
+#texto{
+  width: 40%;
+  height: 100px;
+}
+
+#subtitulo{
+  padding: 10px;
+  font-weight: bold;
+  color: #006494;
+  font-size: large;
+}
+
+.grupo{
+  color: #006494;
+}
 
 /* --------- TABLET --------- */
 @media (min-width: 600px) {
@@ -390,6 +436,11 @@ footer a:hover {
   .membrosContainer{
     flex-direction: row;
   }
+
+  .aprenderContainer iframe{
+    height: 370px;
+  }
+
 }
 
 /* --------- LAPTOP --------- */
@@ -420,11 +471,7 @@ footer a:hover {
     line-height: 90px;
   }
 
-  #formContainer{
-    width: 350px;
-  }
 
-  
   #subBtn{
     width: 250px;
   }
@@ -436,6 +483,10 @@ footer a:hover {
 
   .membrosContainer{
     flex-direction: row;
+  }
+
+  .aprenderContainer iframe{
+    width: 50%;
   }
 }
 
@@ -533,6 +584,13 @@ footer a:hover {
 
 .content img{
   width: 250px;
+}
+
+.content h3{
+  font-weight: bold;
+  color: #006494;
+  padding: 0;
+  font-size: 20px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
