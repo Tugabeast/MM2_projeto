@@ -439,6 +439,14 @@ footer a:hover {
   padding-left: 40px;
 }
 
+#tejo{
+  width: 50%;
+  margin: auto;
+}
+
+#tejo img{
+  width: 100%;
+}
 
 /******** TABELA ***************/
 
@@ -522,6 +530,10 @@ tbody tr:hover {
     flex-grow: 1;
     width: 100%;
   }
+
+  #tejo img{
+    height: 300px;
+  }
 }
 
 
@@ -529,7 +541,7 @@ tbody tr:hover {
 @media (min-width: 800px) {
   
   .video{
-    width: 700px;
+    width: min-content;
     height: 300px;
     margin: auto;
   }
