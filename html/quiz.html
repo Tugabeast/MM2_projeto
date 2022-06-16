@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="style.css">
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="index.js"></script>
         <script src="quiz.js"></script>
+        <script src="menu.js"></script>
     </head>
     <body>
         <nav>
@@ -20,6 +20,9 @@
               <a href="curiosidades.html">Curiosidades</a>
               <a href="" class="active">Quiz</a>
               <a href="loja.html">Loja</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="icons8-map-pin-office/icons8-menu-arredondado-50.png" alt="menu">
+              </a>
             </div>
         </nav>
         <div class="container">
@@ -28,16 +31,21 @@
                 <div class="timer" id="relogio">20</div>
             </div>
             <div>
+                <div id="inicialInfo">
+                    <h1 class="title">Quizz</h1>
+                    <h3>Ao clicar no botão abaixo terá 20 segundos para responder a cada pergunta...</h3>
+                    <h3>Cada pergunta certa vale 100 moedas...</h3>
+                </div>
                 <button onclick="start()" id="startQuiz" class="btn1 wave">Start Quiz</button>
                 <div class="pergunta" id="pergunta">
                     <p id="quest">1- O que é a poluição marítima?</p>
                     <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
                 </div>
                 <div class="respostas" id="respostas">
-                    <div id="rep1" onclick="question() ; resp(1) ; restartTimer()">Introdução de elementos inofensivos no ambiente marinho</div>
-                    <div id="rep2" onclick="question() ; resp(2) ; restartTimer()">Introdução de elementos prejudiciais no ambiente marinho</div>
-                    <div id="rep3" onclick="question() ; resp(3) ; restartTimer()">Diminuição da temperatura da água do mar</div>
-                    <div id="rep4" onclick="question() ; resp(4) ; restartTimer()">A entrada de pessoas na água do mar</div>
+                    <div id="rep1" onclick="restartTimer() ; question() ; resp(1)">Introdução de elementos inofensivos no ambiente marinho</div>
+                    <div id="rep2" onclick="restartTimer() ; question() ; resp(2)">Introdução de elementos prejudiciais no ambiente marinho</div>
+                    <div id="rep3" onclick="restartTimer() ; question() ; resp(3)">Diminuição da temperatura da água do mar</div>
+                    <div id="rep4" onclick="restartTimer() ; question() ; resp(4)">A entrada de pessoas na água do mar</div>
                 </div>
             </div>
             <div id="final">

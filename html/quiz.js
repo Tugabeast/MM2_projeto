@@ -87,6 +87,7 @@ function start(){
     document.getElementById("respostas").style.display = "grid";
     document.getElementById("pergunta").style.display = "flex";
     document.getElementById("startQuiz").style.display = "none";
+    document.getElementById("inicialInfo").style.display = "none";
 }
 
 

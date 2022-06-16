@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="index.js"></script>
+        <script src="menu.js"></script>
     </head>
     <body>
         <nav>
@@ -19,17 +19,51 @@
               <a href="" class="active">Curiosidades</a>
               <a href="quiz.html">Quiz</a>
               <a href="loja.html">Loja</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="icons8-map-pin-office/icons8-menu-arredondado-50.png" alt="menu">
+              </a>
             </div>
         </nav>
         <div class="container">
-            <div id="mapContainer">
-                <img src="maps.jpg" alt="mapa" id="mapa">
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin1" id="pin1" onclick="openFact(1)"></span>
-                <span><img src="icons8-map-pin-office/icons8-map-pin-30.png" alt="pin2" id="pin2" onclick="openFact(2)"></span>
-            </div>
-            <div id="factBox">
-                <h1>Curiosidade: </h1>
-                <p id="texto">sauhdusbudnuasnhd</p>
+            <h1 class="title">Sabia que...</h1>
+            <div class="curiosidades">
+                <div class="curiosidade">
+                    <p>Primeira curiosidade</p>
+                    <img src="curiosidadesImagens/curiosidade1.jpg" alt="curiosidade1">
+                    <p>Ilha de Lixo / Grande Mancha de Lixo do Pacífico possui 3 vezes o tamanho da França</p>
+                </div>
+                <div class="curiosidade">
+                    <p>Segunda curiosidade</p>
+                    <img src="curiosidadesImagens/curiosidade2.jpeg" alt="curiosidade2">
+                    <p>Os Estados Unidos são a principal fonte de lixo plástico no oceano</p>
+                </div>
+                <div class="curiosidade">
+                    <p>Terceira curiosidade</p>
+                    <img src="curiosidadesImagens/curiosidade3.png" alt="curiosidade3">
+                    <p>10 países que mais despejam plástico nos oceanos (dados de 2021):</p>
+                    <div id="lista">
+                        <p>1.Índia - 126,5 milhões de kg de plástico</p>
+                        <p>2.China - 70,7 milhões de kg de plástico</p>
+                        <p>3.Indonésia - 56,3 milhões de kg de plástico</p>
+                        <p>4.Brasil - 38 milhões de kg de plástico</p>
+                        <p>5.Tailândia - 22,8 milhões de kg de plástico</p>
+                        <p>6.México - 3,5 milhões de kg de plástico</p>
+                        <p>7.Egito - 2,5 milhões de kg de plástico</p>
+                        <p>8.Estados Unidos - 2,4 milhões de kg de plástico</p>
+                        <p>9.Japão - 1,8 milhões de kg de plástico</p>
+                        <p>10.Reino Unido - 703 mil kg de plástico</p>
+                    </div>
+                </div>
+                <div class="curiosidade">
+                    <p>Quarta curiosidade</p>
+                    <img src="curiosidadesImagens/curiosidade4.jpg" alt="curiosidade4">
+                    <p>Até 2050 os oceanos poderão conter, por peso, mais plástico do que peixe</p>
+                </div>
+                <div class="curiosidade">
+                    <p>Quinta curiosidade</p>
+                    <img src="curiosidadesImagens/curiosidade5.jpeg" alt="curiosidade5">
+                    <p>Microplásticos (dados de 2017) -  Há 51 biliões de partículas microplásticas nos mares, 500 vezes mais do que estrelas na nossa galáxia</p>
+                </div>
             </div>
         </div>
         <footer>
