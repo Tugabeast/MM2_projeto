@@ -98,6 +98,7 @@ footer a:hover {
   border-radius: 25px;
   border: none;
   margin: auto;
+  margin-top: 20px;
   cursor: pointer;
   color: white;
   font-weight: bold;
@@ -418,6 +419,16 @@ footer a:hover {
   width: 80%;
 }
 
+.paragraph{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.descricao{
+  color: #247BA0;
+  text-transform: uppercase
+}
+
 
 /* --------- TABLET --------- */
 @media (min-width: 600px) {
@@ -517,6 +528,10 @@ footer a:hover {
   #rep4{
     line-height: 100px;
     padding: 0;
+  }
+
+  #indexDesc{
+    padding: 20px;
   }
 }
 
