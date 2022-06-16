@@ -448,6 +448,11 @@ footer a:hover {
   width: 100%;
 }
 
+.backTop{
+  text-decoration: none;
+  color: #006494;
+}
+
 /******** TABELA ***************/
 
 .containerTable > header {
