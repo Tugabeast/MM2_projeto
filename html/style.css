@@ -52,6 +52,10 @@ body {
   min-height: 100%;
 }
 
+.container p{
+  text-align: start;
+}
+
 hr{
   color: #67BF77;
 }
@@ -175,10 +179,6 @@ footer a:hover {
   margin-bottom: 20px;
 }
 
-.next{
-  cursor: pointer;
-}
-
 .respostas{
   display: grid;
   grid-template-columns: auto auto;
@@ -261,11 +261,10 @@ footer a:hover {
 .produto{
   display: flex;
   flex-direction: column;
-  background-color: #A7BCDB;
+  background-color: #fff;
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px gray;
   cursor: pointer;
   align-items: center;
 }
@@ -273,6 +272,10 @@ footer a:hover {
 .produto img{
   flex-grow: 1;
   width: 100%;
+}
+
+.produto h4{
+  color: #006494;
 }
 
 .preco{
@@ -287,6 +290,10 @@ footer a:hover {
 .aprenderContainer{
   padding: 20px;
   text-align: center;
+}
+
+.aprenderContainer p{
+  text-align: start;
 }
 
 .aprenderContainer iframe{
@@ -406,7 +413,7 @@ footer a:hover {
   padding: 10px;
   margin: 30px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px gray;
+  background-color: #fff;
 }
 
 .curiosidade p{
@@ -425,6 +432,7 @@ footer a:hover {
 }
 
 .descricao{
+  flex-grow: 1;
   color: #247BA0;
   text-transform: uppercase
 }
@@ -484,6 +492,13 @@ footer a:hover {
   text-align: center;
   box-shadow: 5px 5px 20px gray;
   width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parceiros p{
+  flex-grow: 1;
 }
 
 .parceiros .nome{
@@ -500,6 +515,46 @@ footer a:hover {
 .parceiros img{
   width: 100%;
   border-radius: 50%;
+  flex-grow: 1;
+}
+
+#certo{
+  display: none;
+}
+
+#errado{
+  display: none;
+}
+
+.respostaCerta{
+  padding: 20px;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.respostaErrada{
+  padding: 20px;
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#next{
+  cursor: pointer;
+}
+
+#back{
+  cursor: pointer;
+  width: 48px;
 }
 
 /******** TABELA ***************/
@@ -539,7 +594,7 @@ th {
 }
 
 td, th {
-    padding: 0.3em 0.7em;
+    padding: 0.2% 1%;
     text-align: left;
 }
 
@@ -594,7 +649,7 @@ tbody tr:hover {
   }
 
   .parceiros img{
-    width: 196px;
+    width: 70%;
   }
 }
 
@@ -806,7 +861,7 @@ tbody tr:hover {
 }
 
 .content img{
-  width: 250px;
+  width: 60%;
 }
 
 .content h3{
@@ -826,7 +881,7 @@ tbody tr:hover {
 @media screen and (max-width: 600px) {
 
   .content img{
-    width: 100%;
+    width: 60%;
   }
 
   .timeline::after {

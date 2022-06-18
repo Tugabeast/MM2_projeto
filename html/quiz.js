@@ -1,11 +1,37 @@
 var pergunta = 1;
 var tempo = 20;
-var certas = 0;
-var erradas = 0;
 var timer;
 
+
+function proxima(){
+    pergunta = pergunta +1;
+    question();
+    if(pergunta !== 8){
+        document.getElementById("relogio").style.display = "block";
+        document.getElementById("fotoPergunta").style.display = "block";
+        document.getElementById("respostas").style.display = "grid";
+        document.getElementById("pergunta").style.display = "flex";
+        document.getElementById("certo").style.display = "none";
+    }else{
+        document.getElementById("relogio").style.display = "none";
+        document.getElementById("fotoPergunta").style.display = "none";
+        document.getElementById("respostas").style.display = "none";
+        document.getElementById("pergunta").style.display = "none";
+        document.getElementById("certo").style.display = "none";
+    }
+
+}
+
+function anterior(){
+    question();
+    document.getElementById("relogio").style.display = "block";
+    document.getElementById("fotoPergunta").style.display = "block";
+    document.getElementById("respostas").style.display = "grid";
+    document.getElementById("pergunta").style.display = "flex";
+    document.getElementById("errado").style.display = "none";
+
+}
 function question(){
-    pergunta = pergunta + 1;
     switch(pergunta){
         case 2:
             document.getElementById("quest").innerHTML = "2- O lixo marinho é composto principalmente por…";
@@ -106,46 +132,111 @@ function restartTimer(){
 
 
 function resp(numero){
-    console.log(numero);
-    switch(pergunta){
+    switch(pergunta) {
         case 1:
             if(numero == 2){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 2: 
+        case 2:
             if(numero == 4){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 3: 
+        case 3:
             if(numero == 1){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 4: 
+        case 4:
             if(numero == 3){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 5: 
+        case 5:
             if(numero == 4){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 6: 
+        case 6:
             if(numero == 2){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
-        case 7: 
+        case 7:
             if(numero == 4){
-                certas = certas +1;
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("certo").style.display = "block";
+            }else{
+                document.getElementById("relogio").style.display = "none";
+                document.getElementById("fotoPergunta").style.display = "none";
+                document.getElementById("respostas").style.display = "none";
+                document.getElementById("pergunta").style.display = "none";
+                document.getElementById("errado").style.display = "block";
             }
             break;
     }
-    console.log("certas: " + certas);
-    console.log("erradas: " + erradas);
-    document.getElementById("respCerta").innerHTML = certas;
-    document.getElementById("respErrada").innerHTML = erradas;
 }

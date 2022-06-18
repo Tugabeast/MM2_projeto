@@ -39,13 +39,20 @@
                 <button onclick="start()" id="startQuiz" class="btn1 wave">Start Quiz</button>
                 <div class="pergunta" id="pergunta">
                     <p id="quest">1- O que é a poluição marítima?</p>
-                    <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
                 </div>
                 <div class="respostas" id="respostas">
-                    <div id="rep1" onclick="restartTimer() ; question() ; resp(1)">Introdução de elementos inofensivos no ambiente marinho</div>
-                    <div id="rep2" onclick="restartTimer() ; question() ; resp(2)">Introdução de elementos prejudiciais no ambiente marinho</div>
-                    <div id="rep3" onclick="restartTimer() ; question() ; resp(3)">Diminuição da temperatura da água do mar</div>
-                    <div id="rep4" onclick="restartTimer() ; question() ; resp(4)">A entrada de pessoas na água do mar</div>
+                    <div id="rep1" onclick="restartTimer() ; resp(1) ; question()">Introdução de elementos inofensivos no ambiente marinho</div>
+                    <div id="rep2" onclick="restartTimer() ; resp(2) ; question()">Introdução de elementos prejudiciais no ambiente marinho</div>
+                    <div id="rep3" onclick="restartTimer() ; resp(3) ; question()">Diminuição da temperatura da água do mar</div>
+                    <div id="rep4" onclick="restartTimer() ; resp(4) ; question()">A entrada de pessoas na água do mar</div>
+                </div>
+                <div id="certo">
+                    <p class="respostaCerta">Certo</p>
+                    <img onclick="proxima() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" id="next"></img>
+                </div>
+                <div id="errado">
+                    <p class="respostaErrada">Errado</p>
+                    <img onclick="anterior() ; restartTimer()" src="icons8-map-pin-office/icons8-back-64.png" id="back"></img>
                 </div>
             </div>
             <div id="final">
