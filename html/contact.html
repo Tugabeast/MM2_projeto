@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Team Oceans</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="style.css">
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="menu.js"></script>
+        <script src="quiz.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="topnav" id="myTopnav">
+              <a href="index.html">Team Oceans</a>
+              <a href="Ajudar.html">Como Ajudar?</a>
+              <a href="aprender.html">Aprender</a>
+              <a href="curiosidades.html">Curiosidades</a>
+              <a href="" class="active">Quiz</a>
+              <a href="loja.html">Loja</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="icons8-map-pin-office/icons8-menu-arredondado-50.png" alt="menu">
+              </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div>
+                <h1 class="title">Contacta-nos</h1>
+                <p id="subtitulo">Queres entrar em contacto conosco? Podes contactar-nos por meio do formulário abaixo.</p>
+                <br>
+            </div>
+        
+            <form action="http://www3.ca.ua.pt/formlist.asp" method="post">
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="nome"><strong>Nome</strong></label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+        
+                    <div class="campo">
+                        <label for="apelido"><strong>Apelido</strong></label>
+                        <input type="text" name="apelido" id="apelido" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email"><strong>E-mail</strong></label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
+                <br>
+                <div class="campo">
+                    <label><strong>Qual é a tua idade?</strong></label>
+                    <br>
+                    <label>
+                        <input type="radio" name="idade" value="menos-de-10-anos"> Menos de 10 anos
+                    </label>
+                    <label>
+                        <input type="radio" name="idade" value="entre-10-e-14-anos"> Entre 10 e 14 anos
+                    </label>
+                    <label>
+                        <input type="radio" name="idade" value="mais-de-10-anos"> Mais de 14 anos
+                    </label>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="pais-de-origem"><strong>País de origem</strong></label>
+                    <br>
+                    <select id="pais-de-origem">
+                        <option selected disabled value="">Seleciona</option>
+                        <option>Portugal</option>
+                        <option>Outro país de língua portuguesa</option>
+                        <option>País de língua não portuguesa</option>
+        
+                    </select>
+                </div>
+                <br>
+                <div class="grupo">
+                    <div id="check">
+                        <label><strong>Por qual forma (ou quais formas) conheceste a Team Oceans?</strong></label>
+                        <br>
+                        <br>
+                        <input type="checkbox" id="marketing1" name="marketing1" value="instagram">
+                        <label for="marketing1">Instagram</label>
+                        <input type="checkbox" id="marketing2" name="marketing2" value="facebook">
+                        <label for="marketing2">Facebook</label>
+                        <input type="checkbox" id="marketing3" name="marketing3" value="amigos">
+                        <label for="marketing3">Por amigos ou conhecidos</label>
+                        <input type="checkbox" id="marketing4" name="marketing4" value="parceiras">
+                        <label for="marketing4">Por alguma das nossas organizações parceiras</label>
+                        <input type="checkbox" id="marketing5" name="marketing5" value="outros">
+                        <label for="marketing5">Outros meios</label>
+        
+                    </div>
+                </div>
+                <div class="campo">
+                    <br>
+                    <label><strong>Dúvidas, perguntas, comentários, elogios, críticas construtivas e/ou partilha da experiência com a Ocean Teams:</strong></label>
+                    <br>
+                    <textarea id="texto" name="texto"></textarea>
+                </div>
+                <br>
+                <button class="btn1 wave" type="submit">Enviar</button>
+            </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="redes">
+                <ul><strong>Além do formulário acima, também podes contactar-nos pelos seguintes meios:</strong> 
+                    <br>
+                    <br>    
+                    <li><strong>Instagram:</strong> @teamoceans123</li>
+                    <br>
+                    <li><strong>Facebook:</strong> Página "Team Oceans!"</li>
+                    <br>
+                    <li><strong>Whatsapp</strong> +35198765432111</li>
+                </ul>
+            </div>
+        </div>
+        <div id="tejo">
+            <img src="images/tejo.jpg">
+        </div>
+        <a href="#myTopnav" class="backTop">Voltar ao topo ^</a>
+        <footer>
+          <a href="about.html">Sobre nós</a>
+          <a href="">Contactos</a>
+          <a href="partners.html">Parceiros</a>
+        </footer>
+    </body>
+</html>

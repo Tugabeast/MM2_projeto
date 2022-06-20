@@ -8,52 +8,64 @@
         <link rel="stylesheet" href="style.css">
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAO49bAM6ncwDTq3YA+dalADySXQA9kl0APpJdAOXDgwD5yYgAOYBTAGOnfACGp20AO5FcADyRXADxx4YA+dOfADQ2LQD68+oAbq2FAPnJiQDhwoMAQTowAPPEhQD3yIgA+vPoAPrkyAAzLykA28CBAPr49QC8mWoA68WFANi/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkJCQkAAAAAAAAAAAkJCQkJCQkNCQkAAAAAAAkJHR0dHR0dHR0JCQAAAAkJHR0dHR0dHR0dHQkJAAAdCQkdHR0dHR0dHRgJHQAHCQkZHR0dHR0dHR0SCQkJDQUaCQkJCQkJCQkJCRoUCRMLBwkCGwkNCQkbAwkJEAQGHB8eGxsbDQ0bGxseCQkUDQ0NDQ0NDQ0NDSAJCQkJCQ4NDRENDQ0NDQ8ICRYJCQkADQ0bGw0NDQ0NDRsbCQkAAA0NDQ0BCg0NChcJCQkJAAAADQ0NDQ0NDQ0NDRUJAAAAAAANDQ0NDQkMCQkJAAAAAAAAAAAJCQkJCQkAAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="index.js"></script>
         <script src="quiz.js"></script>
+        <script src="menu.js"></script>
     </head>
     <body>
         <nav>
             <div class="topnav" id="myTopnav">
               <a href="index.html">Team Oceans</a>
               <a href="Ajudar.html">Como Ajudar?</a>
-              <a href="#news">Aprender</a>
+              <a href="aprender.html">Aprender</a>
               <a href="curiosidades.html">Curiosidades</a>
               <a href="" class="active">Quiz</a>
               <a href="loja.html">Loja</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="icons8-map-pin-office/icons8-menu-arredondado-50.png" alt="menu">
+              </a>
             </div>
         </nav>
         <div class="container">
             <div id="infoContainer">
-                <img src="maps.jpg" alt="fotoPergunta" class="fotoPergunta" id="fotoPergunta">
+                <img src="QuizImages/pergunta1.jpeg" alt="fotoPergunta" class="fotoPergunta" id="fotoPergunta">
                 <div class="timer" id="relogio">20</div>
             </div>
             <div>
+                <div id="inicialInfo">
+                    <h1 class="title">Quizz</h1>
+                    <h3>Ao clicar no botão abaixo terá 20 segundos para responder a cada pergunta...</h3>
+                    <h3>Cada pergunta certa vale 100 moedas...</h3>
+                </div>
                 <button onclick="start()" id="startQuiz" class="btn1 wave">Start Quiz</button>
                 <div class="pergunta" id="pergunta">
-                    <p>Questão numero 1</p>
-                    <img onclick="question() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" class="next"></img>
+                    <p id="quest">1- O que é a poluição marítima?</p>
                 </div>
                 <div class="respostas" id="respostas">
-                    <div id="rep1">Resposta 1</div>
-                    <div id="rep2">Resposta 1</div>
-                    <div id="rep3">Resposta 1</div>
-                    <div id="rep4">Resposta 1</div>
+                    <div id="rep1" onclick="restartTimer() ; resp(1) ; question()">Introdução de elementos inofensivos no ambiente marinho</div>
+                    <div id="rep2" onclick="restartTimer() ; resp(2) ; question()">Introdução de elementos prejudiciais no ambiente marinho</div>
+                    <div id="rep3" onclick="restartTimer() ; resp(3) ; question()">Diminuição da temperatura da água do mar</div>
+                    <div id="rep4" onclick="restartTimer() ; resp(4) ; question()">A entrada de pessoas na água do mar</div>
                 </div>
-                <div id="formContainer">
-                    <form action="" class="forms">
-                        <label for="userName">Username: </label>
-                        <input type="text" name="userName" id="userName" placeholder="Username">
-                        <label for="idade">Idade: </label>
-                        <input type="number" name="idade" id="idade" placeholder="Idade">
-                        <button type="submit" id="subBtn">Enivar dados</button>
-                    </form>
+                <div id="certo">
+                    <p class="respostaCerta">Certo</p>
+                    <img onclick="proxima() ; restartTimer()" src="icons8-map-pin-office/icons8-next-page-48.png" id="next"></img>
+                </div>
+                <div id="errado">
+                    <p class="respostaErrada">Errado</p>
+                    <img onclick="anterior() ; restartTimer()" src="icons8-map-pin-office/icons8-back-64.png" id="back"></img>
                 </div>
             </div>
+            <div id="final">
+                <h1 class="title">Quer saber como foi o seu desempenho?</h1>
+                <h3>Clique no botão abaixo para ver o seu resultado</h3>
+            </div>
+            <a href="score.html" class="btn1 wave" id="score">Ver o resultado</a>
         </div>
+        <a href="#myTopnav" class="backTop">Voltar ao topo ^</a>
         <footer>
           <a href="about.html">Sobre nós</a>
-          <a href="#about us">Contactos</a>
-          <a href="#about us">Parceiros</a>
+          <a href="contact.html">Contactos</a>
+          <a href="partners.html">Parceiros</a>
         </footer>
     </body>
 </html>
