@@ -954,3 +954,10 @@ tbody tr:hover {
 .carousel-control.left{
   background-image: none !important;
 }
+
+.carousel-indicators{
+  opacity: 0% !important;
+}
+
+
+/**/ 
