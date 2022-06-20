@@ -326,7 +326,7 @@ footer a:hover {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  box-shadow: 5px 5px 20px gray;
+  border-radius: 5px;
 }
 
 .membro .nome{
@@ -336,6 +336,8 @@ footer a:hover {
 
 .membro img{
   width: 100%;
+  height: 50%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -398,6 +400,7 @@ footer a:hover {
   font-weight: bold;
   color: #006494;
   font-size: large;
+  text-align: center;
 }
 
 .grupo{
@@ -433,7 +436,6 @@ footer a:hover {
 }
 
 .descricao{
-  flex-grow: 1;
   color: #247BA0;
   text-transform: uppercase
 }
@@ -477,8 +479,8 @@ footer a:hover {
   flex-direction: column;
   margin: auto;
   margin: 10px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .parceirosTitle{
@@ -516,7 +518,6 @@ footer a:hover {
 .parceiros img{
   width: 100%;
   border-radius: 50%;
-  flex-grow: 1;
 }
 
 #certo{
@@ -647,10 +648,15 @@ tbody tr:hover {
 
   .parceirosContainer{
     flex-direction: row;
+    align-items: unset;
   }
 
   .parceiros img{
     width: 70%;
+  }
+
+  .membro img{
+    height: 30%;
   }
 }
 
@@ -736,11 +742,15 @@ tbody tr:hover {
   #indexDesc{
     padding: 20px;
   }
+
+  .membro img{
+    height: 40%;
+  }
 }
 
 /*********** HAMBURGUER MENU **********/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -752,7 +762,7 @@ tbody tr:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
