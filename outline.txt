@@ -2,25 +2,33 @@ Website Outline
 
 1. Website Pages
 	a. Home Page
-		i. Vai ter noticias, um resumo do problema em causa e o nosso proposito
+		i. Apresentação do objetivo do tema escolhido.
+		ii. Apresentação de várias direções que o utilizador pode seguir para continuar a usufruir do website
 	b. Sobre Nós
-		i. Algumas informações sobre os participantes do projeto
+		i. Algumas informações da organização (Team Oceans)  
+		ii. Algumas informações sobre os participantes do projeto
 	c. Contactos
-		i. Informações sobre o website, como email, instagram, facebook entre outros
-	d. Mappa Mundi
-		i.mappa mundi contem curiosidades em pins
-	e. Ajudar
-		i. Dicas e atitudes para que o utilizador possa combater o problema do lixo nos oceanos
-		ii.Um formulario para a newsletter e entrar em eventos
-	f. Media
-		i. Imagens , videos e audios para sensibilizar os utilizadores
+		i.  Formulario para entrar em contacto com a Team Oceans.
+		ii. Informações sobre o website, como email, instagram, facebook entre outros
+	d. Parceiros
+		i. Apresentação de Alguns parceiros nacionais e internacionais, dos quais a Team Oceans colabora
+	e. Como Ajudar?
+		i. Boas práticas para que o utilizador possa reduzir o problema do lixo nos oceanos
+	f. Aprender
+		i. Aprensetação de várias informações para que o utilizador se possa informar melhor sobre o problema do lixo nos oceanos
 	g. Quiz	
-		i. Jogo interativo com ligação ao quiz
+		i. Quiz com algumas perguntas para sensibilizar o utilizador
+	h. Curiosidades
+		i. Algumas curiosidades sobre o problema do lixo nos oceanos
+	j. Loja
+		i. Alguns items pelo qual o utilizador pode trocar, caso consiga acabar o quiz com sucesso.
 	
 2. Site Features
 	a. Design responsivo para mobile
 	b. Videos e audios embibidos em uma página
 	c. Quiz sobre poluiçao nos oceanos
-	d. Jogo interativo sobre remover lixo dos oceanos ligado ao quiz
+	d. Formulario para contactar a Team Oceans
+	e. Ranking do Quiz que dará pontos para trocar na loja
+	
 	
 	
